@@ -199,8 +199,12 @@ header p {
 #plan h4 {
     font-weight: bold;
     text-transform: uppercase;
+    width: auto;
+    margin: 0 auto;
 }
 #plan section {
+    display: grid;
+    align-items: center;
     background-color: var(--teal);
     border-style: solid;
     border-width: 3px;
@@ -209,6 +213,14 @@ header p {
     padding: 10px 20px;
     margin: 10px auto;
     width: 250px;
+}
+#plan a {
+    display: grid;
+    align-items: center;
+}
+#plan img {
+    width: auto;
+    margin: 0 auto;
 }
 #testimonials section {
     display: grid;
@@ -227,6 +239,10 @@ header p {
 #about {
     background-color: var(--blue);
     width: 100vw;
+}
+#about h3 {
+    padding-top: 1em;
+    padding-bottom: .5em;
 }
 #about section {
     display: grid;
@@ -262,7 +278,10 @@ header p {
 #contact input, #travelTime, #destination {
     border-color: var(--purple);
     border-style: solid;
-    padding: 5px;
+    padding-right: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 5px;
 }
 .required {
     color: var(--purple);
@@ -278,9 +297,19 @@ form label {
     justify-content: center;
     margin-top: 1em;
 }
+form input {
+    padding: 1em 2em;
+}
+form div {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
 #mySubmit {
     margin: 1em 0;
-    padding: 1rem 30px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color: var(--white);
     background-color: var(--purple);
 }
@@ -333,8 +362,11 @@ footer a {
     body {
         max-width: 100%;
     }
-    #plan {
+    #plan div{
         display: flex;
+    }
+    #plan section {
+        margin: 5px;
     }
     form {
         display: grid;

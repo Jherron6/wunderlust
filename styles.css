@@ -1,0 +1,349 @@
+/*Jennifer Herron*/
+/*CSS Reset*/
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+/*End CSS Reset*/
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+body {
+    display: grid;
+    grid-template-columns: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Hide Skip to Main Content and Nav Header*/
+    #skip {
+        position: absolute;
+        left: -100000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    #skip:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+    .sr-only {
+        position: absolute;
+            left: -100000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+    }
+/*End hide Skip to Main Content and Nav Header*/
+
+/*Start Nav Styles*/
+    #toggle {
+        display: none;
+    }
+    #menu-toggle {
+        position: absolute;
+        top: 3em;
+        right: 0;
+    }
+    nav label {
+        cursor: pointer;
+        color: var(--black);
+        background-color: var(--yellow);
+        padding: 10px;
+        text-transform: uppercase;
+    }
+    ul {
+        display: flex;
+        flex-flow: column;
+        max-height: 0;
+        overflow: hidden;
+        align-items: center;
+        transition: max-height 0.3s ease;
+        background-color: var(--teal);
+        right: 0;
+        align-items: flex-end;
+    }
+    ul li {
+        border-bottom: 1px solid var(--dark-gray);
+        width: 100%;
+        height: auto;
+    }
+    ul li a {
+        text-decoration: none;
+        color: var(--black);
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+    }
+    ul li a:hover {
+        color: var(--yellow);
+    }
+    #toggle:checked + label{
+        background-color: var(--dark-gray);
+        color: var(--white);
+        width: 100vw;
+    }
+    #toggle:checked + label + ul {
+        max-height: 200px;
+        width: 100vw;
+        top: 50%;
+    }
+
+    
+/*End Nav Styles*/
+header {
+    background-image: linear-gradient(var(--teal), var(--white));
+    width: 100vw;
+}
+header img {
+    margin-top: 10px;
+    margin-left: 5vw;
+    width: 33vw;
+    height: auto;
+}
+h1, h2, h3 {
+    font-family: Molle, Luminari, fantasy;
+    font-size: 2rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vw;
+}
+h1 {
+    color: var(--dark-gray);
+}
+h4, p, q, nav, button, form {
+    font-family: Montserrat, Arial, sans-serif;
+    align-self: center;
+}
+h4 {
+    font-size: 1rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+p, q, nav, button, form {
+    font-size: .75rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    
+}
+header p {
+    font-size: 1em;
+}
+#intro p {
+    line-height: 1.5;
+}
+#img-grid {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#plan {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--yellow);
+    width: 100vw;
+}
+#plan h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#plan section {
+    background-color: var(--teal);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 12px;
+    border-color: var(--white);
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: 250px;
+}
+#testimonials section {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+   
+}
+#testimonials h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+#testimonials img, #testimonials p, #testimonials q, #testimonials h4 {
+    width: auto;
+    margin: 0 auto;
+}
+#about {
+    background-color: var(--blue);
+    width: 100vw;
+}
+#about section {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+#about h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    width: auto;
+    margin: 0 auto;
+}
+#about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+}
+#about img {
+    width: auto;
+    height: 20vw;
+    margin: 0 auto;
+}
+#about p {
+    width: auto;
+    margin: 0 auto;
+}
+#contact input, #travelTime, #destination {
+    border-color: var(--purple);
+    border-style: solid;
+    padding: 5px;
+}
+.required {
+    color: var(--purple);
+}
+.form-required {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+form label {
+    display: block;
+    justify-content: center;
+    margin-top: 1em;
+}
+#mySubmit {
+    margin: 1em 0;
+    padding: 1rem 30px;
+    color: var(--white);
+    background-color: var(--purple);
+}
+footer {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+footer a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: .75rem;
+}
+/*Medium Screen Styles*/
+@media screen and (min-width:768px){
+    body {
+        max-width: 100%;
+    }
+   #menu-toggle {
+    position: relative;
+   }
+    #plan div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #about div {
+        display: flex;
+        
+    }
+    #contact {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    footer {
+        display: flex;
+        flex-flow: row;
+    }
+}
+
+/*Large Screen Styles*/
+@media screen and (min-width:992px){
+    body {
+        max-width: 100%;
+    }
+    #plan {
+        display: flex;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        gap: 10px;
+    }
+}
